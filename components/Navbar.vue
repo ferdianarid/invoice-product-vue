@@ -17,20 +17,17 @@
                      <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
                             <!-- Navigation  Links-->
                             <div class="text-sm sm:flex-grow sm:text-right">
-                                   <!-- <a href="#responsive-header" class="no-underline block mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-green-800 mr-4">
-                                   Bahasa
-                                   </a> -->
+                                   <a href="#responsive-header" class="no-underline block mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
+                                   Product
+                                   </a>
                             </div>
                             <div>
-                            <!-- Download Button -->
-                            <!-- Register -->
-                            <NuxtLink to="/auth/register" class="no-underline inline-block text-sm px-4 py-2 leading-none bg-white border-blue-800 border rounded text-blue-800  hover:border-transparent hover:bg-blue-800 hover:text-white mt-4 sm:mt-0">Register</NuxtLink>
 
-                            <!-- Login Page -->
-                            <NuxtLink to="/auth/login" class="no-underline inline-block text-sm px-4 py-2 leading-none bg-white border-blue-800 border rounded text-blue-800  hover:border-transparent hover:bg-blue-800 hover:text-white mt-4 sm:mt-0">Login</NuxtLink>
+                            <!-- Login Button -->
+                            <NuxtLink to="/auth/register" class="no-underline inline-block text-sm px-4 py-2 leading-none bg-white border-blue-800 border rounded text-blue-800  hover:border-transparent mt-4 sm:mt-0">Login</NuxtLink>
 
-                            <!-- Bahasa / Language -->
-                            <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none bg-white border-blue-800 border rounded text-blue-800  hover:border-transparent hover:bg-blue-800 hover:text-white mt-4 sm:mt-0">English</a>
+                            <!-- Get Started Button -->
+                            <NuxtLink to="/auth/login" class="no-underline inline-block text-sm px-4 py-2 leading-none bg-blue-800 border-blue-800 border rounded text-white  hover:border-transparent hover:bg-white hover:text-blue-800 hover:border-blue-800 mt-4 sm:mt-0">Get Started</NuxtLink>
                             </div>
                      </div>
                      </nav>
@@ -40,7 +37,7 @@
 
 <script>
 export default {
-       name: "NavbarAuth",
+       name: "Navbar",
        data() {
               return {
                      open: false,
