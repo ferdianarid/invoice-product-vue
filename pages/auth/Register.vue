@@ -37,7 +37,7 @@
 			<!-- Google OAuth Button -->
 			<div class="mb-4">
 				<button class="flex justify-center items-center w-full text-dark py-2 px-3 rounded text-sm bg-white border border-gray-500">
-					<!-- <img src="../../static/icon.png" width="36" alt="" class="pr-2"> -->
+					<img src="../../static/google.svg" width="24" alt="" class="pr-2">
 					Google
 				</button>
 			</div>
