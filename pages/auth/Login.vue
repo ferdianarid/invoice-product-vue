@@ -3,7 +3,7 @@
 		<NavbarAuth />
 		<!-- Heading Login Form -->
 		<div class="headingLogin max-w-2xl m-auto mt-8 text-center">
-			<h1 class="text-5xl font-bold">Login to access dashboard</h1>
+			<h1 class="text-heading-lg font-bold">Login to access dashboard</h1>
 			<p class="text-small text-gray-500 font-normal pt-2">Manage your business in a simplest way !</p>	
 		</div>
 		<!-- Login Form -->
@@ -32,7 +32,7 @@
 			<!-- Google OAuth Button -->
 			<div class="mb-4">
 				<button class="flex justify-center items-center w-full text-dark py-1 px-2 rounded text-sm bg-white border border-gray-500">
-					<img src="../../static/icon.png" width="36" alt="" class="pr-2">
+					<img src="../../static/google.svg" width="24" alt="" class="pr-2">
 					Google
 				</button>
 			</div>

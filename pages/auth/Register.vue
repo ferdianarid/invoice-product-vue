@@ -3,7 +3,7 @@
 		<NavbarAuth />
 		<!-- Heading Login Form -->
 		<div class="headingLogin max-w-2xl m-auto mt-8 text-center">
-			<h1 class="text-5xl font-bold">Get your free account</h1>
+			<h1 class="text-heading-lg font-bold">Get your free account</h1>
 			<p class="text-small text-gray-500 font-normal pt-2">Join and get easy way experience to manage your business!</p>	
 		</div>
 		<!-- Login Form -->
@@ -32,7 +32,7 @@
 			</div>
 			<!-- Login Button -->
 			<div class="mb-4">
-				<button @click="message" class="block w-full text-white py-2 px-3 rounded text-sm bg-blue-800 hover:bg-blue-900">Register</button>
+				<button href="/" @click="message" class="block w-full text-white py-2 px-3 rounded text-sm bg-blue-800 hover:bg-blue-900">Register</button>
 			</div>
 			<!-- Google OAuth Button -->
 			<div class="mb-4">
