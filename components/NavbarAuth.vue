@@ -5,7 +5,9 @@
                      <nav class="navbar flex items-center justify-between flex-wrap  bg-transparent pb-8">
                             <!-- Brand and Logos -->
                             <div class="flex items-center flex-no-shrink mr-6">
-                                   <img src="../static/timvoice.svg" alt="timvoicelogo" width="195px">
+                                   <a href="/">
+                                          <img src="../static/timvoice.svg" alt="timvoicelogo" width="195px">
+                                   </a>
                             </div>
                      <!-- Hamburger Component -->
                      <div class="block sm:hidden">
