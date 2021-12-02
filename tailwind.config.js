@@ -32,7 +32,8 @@ module.exports = {
             'shadow-3': '0px 24px 96px rgba(0, 0, 0, 0.08'
         },
         fontWeight: {
-
+            normal: 400,
+            bold: 700
         },
         extend: {},
     },
