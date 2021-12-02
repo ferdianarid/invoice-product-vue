@@ -3,7 +3,7 @@
 		<NavbarAuth />
 		<!-- Heading Login Form -->
 		<div class="headingLogin max-w-2xl m-auto mt-8 text-center">
-			<h1 class="text-heading-lg font-bold">Login to access dashboard</h1>
+			<h1 class="text-[2rem] font-bold md:text-heading-lg">Login to access dashboard</h1>
 			<p class="text-small text-gray-500 font-normal pt-2">Manage your business in a simplest way !</p>	
 		</div>
 		<!-- Login Form -->

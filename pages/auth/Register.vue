@@ -3,7 +3,7 @@
 		<NavbarAuth />
 		<!-- Heading Login Form -->
 		<div class="headingLogin max-w-2xl m-auto mt-8 text-center">
-			<h1 class="text-heading-lg font-bold">Get your free account</h1>
+			<h1 class="text-[2rem] font-bold md:text-heading-lg">Get your free account</h1>
 			<p class="text-small text-gray-500 font-normal pt-2">Join and get easy way experience to manage your business!</p>	
 		</div>
 		<!-- Login Form -->
@@ -77,5 +77,8 @@ export default {
 	}
 }
 </script>
-<style lang="">
+<style>
+.fontBold {
+	font-weight: 700;
+}
 </style>
