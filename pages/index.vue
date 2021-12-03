@@ -6,7 +6,7 @@
 			<div class="w-full flex flex-col md:flex-row px-0 md:px-[105px] pb-8">
 				<!-- Heading Content -->
 				<div class="w-full md:w-1/2">
-					<h1 class="text-[2.75rem] leading-[1.2] md:text-heading-xl mt-14 heading">Your Freelance Business In One Place.</h1>
+					<h1 class="text-[2.75rem] leading-[1.2] md:text-heading-xl mt-14 heading">Your Freelance Business In One Place</h1>
 					<p class="text-sm text-gray-500 pt-2 pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ut esse doloribus repellat soluta, eligendi necessitatibus.</p>
 					<div class="flex flex-col md:flex-row max-w-md items-center">
 						<div class="w-full md:w-2/3">
@@ -52,7 +52,7 @@
 						<BenefitCard />
 						<div class="w-full flex py-8 px-10 bg-[#F7F8FD] rounded-3xl my-2">
 							<div class="w-1/4">
-								<img class="scale-75" src="../static/Features/briefcase.svg" alt="currency" width="100%" />
+								<img class="scale-75" src="../static/briefcase.svg" alt="currency" width="100%" />
 							</div>
 							<div class="w-3/4">
 								<h1 class="text-heading-md fontBold">Win More Work</h1>
@@ -61,7 +61,7 @@
 						</div>
 						<div class="w-full flex py-8 px-10 bg-[#F7F8FD] rounded-3xl my-2">
 							<div class="w-1/4">
-								<img class="scale-75" src="../static/Features/shield-check.svg" alt="currency" width="100%" />
+								<img class="scale-75" src="../static/shield.svg" alt="currency" width="100%" />
 							</div>
 							<div class="w-3/4">
 								<h1 class="text-heading-md fontBold">Protect Business</h1>

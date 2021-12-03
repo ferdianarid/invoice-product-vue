@@ -1,5 +1,5 @@
 <template lang="">
-	<div class="px-4 pt-4 md:px-24 md:pt-8">
+	<div class="px-4 pt-4 max-w-[1440px] mx-auto md:px-24 md:pt-8">
 		<NavbarAuth />
 		<!-- Heading Login Form -->
 		<div class="headingLogin max-w-2xl m-auto mt-8 text-center">
@@ -30,16 +30,16 @@
 					<span class="text-blue-800  text-xs pl-2">I agree to the ToS and Privacy Policy</span>
 				</label>
 			</div>
-			<!-- Login Button -->
-			<div class="mb-4">
-				<button href="/" @click="message" class="block w-full text-white py-2 px-3 rounded text-sm bg-blue-800 hover:bg-blue-900">Register</button>
-			</div>
+			<!-- Register Button -->
+			<NuxtLink to="/auth/login" @click="message()" class="mb-4 w-full text-center font-bold ml-0 no-underline inline-block px-4 py-3 leading-none bg-blue-800 border-blue-800 border rounded text-white hover:border-transparent hover:bg-white hover:text-blue-800 mt-4 sm:mt-0">
+				<p class="text-lg font-bold">Register</p>
+			</NuxtLink>
 			<!-- Google OAuth Button -->
 			<div class="mb-4">
-				<button class="flex justify-center items-center w-full text-dark py-2 px-3 rounded text-sm bg-white border border-gray-500">
+				<NuxtLink to="/auth/login" class="w-full flex justify-center items-center text-center font-bold ml-0 no-underline px-4 py-3 leading-none bg-white border-gray-200 border rounded text-blue-800 hover:bg-white mt-4 sm:mt-0">
 					<img src="../../static/google.svg" width="24" alt="" class="pr-2">
-					Google
-				</button>
+					<p class="text-lg">Google</p>
+				</NuxtLink>
 			</div>
 			<!-- Forgot Password -->
                      <div class="flex">
