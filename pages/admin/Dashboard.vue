@@ -22,7 +22,7 @@
                             <div class="w-[55%] h-12 flex items-center justify-between">
                                    <!-- Create button -->
                                    <div class="w-[123px]">
-                                          <NuxtLink to="/auth/login" class="text-center font-bold ml-0 md:ml-1 no-underline flex items-center px-4 py-[10px] leading-none bg-blue-800 border-blue-800 border rounded text-white hover:border-transparent hover:bg-white hover:text-blue-800 mt-4 sm:mt-0">
+                                          <NuxtLink to="/admin/dashboard/create" class="text-center font-bold ml-0 md:ml-1 no-underline flex items-center px-4 py-[10px] leading-none bg-blue-800 border-blue-800 border rounded text-white hover:border-transparent hover:bg-white hover:text-blue-800 mt-4 sm:mt-0">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
                                                         </svg>
@@ -57,10 +57,11 @@
                             </div>
                      </div>
               <!-- Profile Completeness -->
-              <div class="w-[1040px] h-auto py-8 px-16 bg-blue-50">
+              <div class="w-[1240px] h-auto py-8 px-16 bg-blue-50">
                      <div class="popUp bg-[#ffffff] bg-opacity-50 shadow-shadow-3 w-full rounded-lg p-6">
                             <div class="flex justify-between">
                                    <h1 class="text-[20px] mb-6 font-bold">Complete your Profile</h1>
+                                   <!-- close button -->
                                    <NuxtLink to="/" @click="close()">
                                           <img src="../../static/x.svg" alt="closeButton">
                                    </NuxtLink>
@@ -69,68 +70,258 @@
                                    <div class="profile-details hover:cursor-pointer flex items-center py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 w-[325px] rounded-lg">
                                           <img src="../../static/profile.svg" alt="profile">
                                           <div class="ml-[16px]">
-                                                 <p class="text-lg-regular font-bold">Profile Details</p>
-                                                 <p class="text-md-regular text-gray-400">Add phone number</p>
+                                                 <!-- profile details -->
+                                                 <NuxtLink to="/admin/dashboard/profile-details">
+                                                        <p class="text-lg-regular font-bold">Profile Details</p>
+                                                        <p class="text-md-regular text-gray-400">Add phone number</p>
+                                                 </NuxtLink>
                                           </div>
                                    </div>
                                    <div class="profile-details hover:cursor-pointer flex items-center shadow-shadow-3 ml-4 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 w-[325px] rounded-lg">
                                           <img src="../../static/bussiness.svg" alt="business">
                                           <div class="ml-[16px]">
-                                                 <p class="text-lg-regular font-bold">Business Details</p>
-                                                 <p class="text-md-regular text-gray-400">Add business address</p>
+                                                 <!-- business details -->
+                                                 <NuxtLink to="/admin/dashboard/business-details">
+                                                        <p class="text-lg-regular font-bold">Business Details</p>
+                                                        <p class="text-md-regular text-gray-400">Add business address</p>
+                                                 </NuxtLink>
                                           </div>
                                    </div>
                                    <div class="profile-details hover:cursor-pointer flex items-center shadow-shadow-3 ml-4 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 w-[325px] rounded-lg">
                                           <img src="../../static/bussiness.svg" alt="business">
                                           <div class="ml-[16px]">
-                                                 <p class="text-lg-regular font-bold">Invoice Customize</p>
-                                                 <p class="text-md-regular text-gray-400">Upload your logo</p>
+                                                 <!-- invoices customize -->
+                                                 <NuxtLink to="/admin/dashboard/invoice-customize">
+                                                        <p class="text-lg-regular font-bold">Invoice Customize</p>
+                                                        <p class="text-md-regular text-gray-400">Upload your logo</p>
+                                                 </NuxtLink>
                                           </div>
                                    </div>
                             </div>
                      </div>
               </div>
-              <!-- Chart and Statistics -->
-              <div class="w-[1040px] h-auto px-16 bg-blue-50 flex justify-between">
-                     <!-- Chart -->
-                     <div class="w-[40%] h-[200px] bg-white rounded-lg flex justify-center items-center">
-                            <h1 class="font-bold text-[5rem] opacity-5">Chart</h1>
+              <!-- Summary and Revenue -->
+              <div class="w-[1240px] h-auto px-16 bg-blue-50 flex justify-between">
+                     <!-- Summary Chart -->
+                     <div class="w-[40%] h-[220px] py-8 px-10 bg-white rounded-lg">
+                            <h1 class="font-bold text-heading-sm">Summary</h1>
+                            <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
+                                   <img src="../../static/bussiness.svg" alt="business">
+                                   <div class="ml-[16px]">
+                                          <p class="text-lg-regular font-bold">Invoice Customize</p>
+                                          <p class="text-md-regular text-gray-400">Upload your logo</p>
+                                   </div>
+                            </div>
                      </div>
-                     <!-- Statistics -->
-                     <div class="w-[60%] h-[200px] bg-white rounded-lg ml-8 flex justify-center items-center">
-                            <h1 class="font-bold text-[5rem] opacity-5">Statistics</h1>
+                     <!--  RevenueStatistics -->
+                     <div class="w-[60%] h-[220px] py-8 px-10 bg-white rounded-lg ml-8">
+                            <div class="flex justify-between items-center">
+                                   <h1 class="font-bold text-heading-sm">Revenue</h1>
+                                   <Dropdowns />
+                            </div>
+                            <div class="flex justify-between">
+                                   <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
+                                   <img src="../../static/bussiness.svg" alt="business">
+                                   <div class="ml-[16px]">
+                                          <p class="text-lg-regular font-bold">Customize</p>
+                                          <p class="text-md-regular text-gray-400">Your logo</p>
+                                   </div>
+                            </div>
+                            <div class="profile-details mt-5 ml-2 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
+                                   <img src="../../static/bussiness.svg" alt="business">
+                                   <div class="ml-[16px]">
+                                          <p class="text-lg-regular font-bold">Proposals</p>
+                                          <p class="text-md-regular text-gray-400">Upload Brand</p>
+                                   </div>
+                            </div>
+                            </div>
                      </div>
               </div>
               <!-- Number Stats -->
-              <div class="w-[1040px] h-auto py-8 px-16 bg-blue-50">
-                     <div class="w-full bg-white h-[200px] rounded-lg py-10 px-12 flex items-center justify-between">
-                            <div class="w-[25%]">
-                                   <p class="text-gray-700">Total Revenue</p>
-                                   <h1 class="text-heading-xl font-bold">120K</h1>
+              <div class="w-[1240px] h-auto py-8 px-16 bg-blue-50">
+                     <div class="w-full bg-white h-[200px] rounded-lg py-10 px-10 flex items-center justify-between">
+                            <div class="w-[24%] border-r border-gray-400">
+                                   <div class="flex items-start">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#202E63">
+                                          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+                                          </svg>
+                                          <p class="font-bold pl-2 text-[#202E63]">Total Revenue</p>
+                                   </div>
+                                   <h1 class="text-heading-xl font-bold pt-3">120K</h1>
                             </div>
-                             <div class="w-[25%]">
-                                    <p class="text-gray-700">Invoice</p>
-                                   <h1 class="text-heading-xl font-bold">1276</h1>
+                             <div class="w-[24%] pl-6 border-r border-gray-400">
+                                    <div class="flex items-center">
+                                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#202E63">
+                                                 <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd" />
+                                          </svg>
+                                    <p class="font-bold pl-2 text-[#202E63]">Invoice</p>
+                                    </div>
+                                   <h1 class="text-heading-xl font-bold pt-3">1276</h1>
                             </div>
-                            <div class="w-[25%]">
-                                   <p class="text-gray-700">Total Clients</p>
-                                   <h1 class="text-heading-xl font-bold">672</h1>
+                            <div class="w-[24%] pl-6 border-r border-gray-400">
+                                   <div class="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#202E63">
+                                                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                                          </svg>
+                                          <p class="font-bold pl-2 text-[#202E63]">Total Clients</p>
+                                   </div>
+                                   <h1 class="text-heading-xl font-bold pt-3">672</h1>
                             </div>
-                            <div class="w-[25%]">
-                                   <p class="text-gray-700">Outstanding</p>
-                                   <h1 class="text-heading-xl font-bold">$356</h1>
+                            <div class="w-[24%] pl-6">
+                                   <div class="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#202E63">
+                                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                                          </svg>
+                                          <p class="font-bold pl-2 text-[#202E63]">Outstanding</p>
+                                   </div>
+                                   <h1 class="text-heading-xl font-bold pt-3">$356</h1>
                             </div>
                      </div>
               </div>
               <!-- Recent Activity and Invoices -->
-              <div class="w-[1040px] h-auto px-16 pb-20 bg-blue-50 flex justify-between">
-                     <!-- Chart -->
-                     <div class="w-[40%] h-[200px] bg-white rounded-lg flex justify-center items-center">
-                            <h1 class="font-bold text-[5rem] opacity-5">Activity</h1>
+              <div class="w-[1240px] h-auto px-16 pb-20 bg-blue-50 flex justify-between">
+                     <!-- Recent -->
+                     <div class="w-[45%] py-6 px-10 h-auto bg-white rounded-lg">
+                            <div class="flex justify-between items-center">
+                                   <h1 class="font-bold text-heading-sm">Recent Activities</h1>
+                                   <NuxtLink to="/admin/dashboard/recent-activities" class="text-[#405DC7] text-md-regular font-bold">See All</NuxtLink>
+                            </div>
+                            <!-- Items Recent Activity -->
+                            <div class="mt-6 rounded-lg h-auto">
+                                   <div class="py-4 flex hover:bg-blue-50 hover:rounded-lg border-b border-gray-200">
+                                          <img src="../../static/profile.svg" alt="profile" class="pt-0">
+                                          <div class="pl-4">
+                                                 <p class="text-md-regular font-bold pt-1">New Invoices</p>
+                                                 <p class="text-md-regular text-gray-500 pt-1">
+                                                        <span class="font-bold">Udin Alexander</span> created invoice <span class="font-bold">PD-6679B</span></p>
+                                                 <p class="text-md-regular text-gray-500 pt-1 font-normal">Just Now</p>
+                                          </div>
+                                   </div>
+                                   <div class="py-4 flex hover:bg-blue-50 hover:rounded-lg">
+                                          <img src="../../static/profile.svg" alt="profile" class="pt-0">
+                                          <div class="pl-4">
+                                                 <p class="text-md-regular font-bold pt-1">Reminder</p>
+                                                 <p class="text-md-regular text-gray-500 pt-1">
+                                                        <span class="font-bold">Invoice TU-2369</span> reminder was sent to <br> <span class="font-bold">Elizabeth Diningrat</span>
+                                                 <p class="text-md-regular text-gray-500 pt-1 font-normal">Yesterday, 5:34 PM</p>
+                                          </div>
+                                   </div>
+                                   <div class="py-4 flex hover:bg-blue-50 hover:rounded-lg border-t border-gray-200">
+                                          <img src="../../static/profile.svg" alt="profile" class="pt-0">
+                                          <div class="pl-4">
+                                                 <p class="text-md-regular font-bold pt-1">New Invoices</p>
+                                                 <p class="text-md-regular text-gray-500 pt-1">
+                                                        <span class="font-bold">Udin Alexander</span> created invoice <span class="font-bold">PD-6679B</span></p>
+                                                 <p class="text-md-regular text-gray-500 pt-1 font-normal">Just Now</p>
+                                          </div>
+                                   </div>
+                            </div>
                      </div>
-                     <!-- Statistics -->
-                     <div class="w-[60%] h-[200px] bg-white rounded-lg ml-8 flex justify-center items-center">
-                            <h1 class="font-bold text-[5rem] opacity-5">Invoices</h1>
+                     <!-- Invoice -->
+                     <div class="w-[55%] py-6 px-10 h-auto bg-white rounded-lg ml-8">
+                            <div class="flex justify-between items-center">
+                                   <h1 class="font-bold text-heading-sm">Recent Invoices</h1>
+                                   <NuxtLink to="/admin/dashboard/recent-invoices" class="text-[#405DC7] text-md-regular font-bold">See All</NuxtLink>
+                            </div>
+                            <!-- Items Recent Invoices -->
+                            <div class="mt-6 rounded-lg h-auto">
+                                   <!-- Row Invoices -->
+                                   <div class="flex justify-between pb-1">
+                                          <!-- Field ID -->
+                                          <div class="py-[14px] pr-4">
+                                                 <h1 class="font-bold text-md-bold">ID</h1>
+                                          </div>
+                                          <!-- Field Date -->
+                                          <div class="py-[14px] pr-4">
+                                                 <h1 class="font-bold text-md-bold">Date</h1>
+                                          </div>
+                                          <!-- Field Client -->
+                                          <div class="py-[14px] pr-4">
+                                                 <h1 class="font-bold text-md-bold">Client</h1>
+                                          </div>
+                                          <!-- Field Amount -->
+                                          <div class="py-[14px] pr-4">
+                                                 <h1 class="font-bold text-md-bold">Amount</h1>
+                                          </div>
+                                          <!-- Field Status -->
+                                          <div class="py-[14px] pr-4">
+                                                 <h1 class="font-bold text-md-bold">Status</h1>
+                                          </div>
+                                   </div>
+                                   <!-- Divider -->
+                                   <hr>
+                                   <div class="flex">
+                                          <!-- Value ID -->
+                                          <div class="py-6 pr-4">
+                                                 <p class="text-md-regular">PD-6679B</p>
+                                          </div>
+                                          <!-- Value Date -->
+                                          <div class="py-6 pr-6">
+                                                 <p class="text-md-regular">5/11/2021</p>
+                                          </div>
+                                          <!-- Value Client -->
+                                          <div class="py-6 pr-4">
+                                                 <p class="text-md-regular">Udin Alexander</p>
+                                          </div>
+                                          <!-- Value Amount -->
+                                          <div class="py-6 pr-8">
+                                                 <p class="text-md-regular">$24</p>
+                                          </div>
+                                          <!-- Value Status -->
+                                          <div class="py-6 pr-4 pl-10">
+                                                 <p class="text-md-regular">Unpaid</p>
+                                          </div>
+                                   </div>
+                                   <!-- Divider -->
+                                   <hr>
+                                   <div class="flex">
+                                          <!-- Value ID -->
+                                          <div class="py-6 pr-4">
+                                                 <p class="text-md-regular">TU-2369A</p>
+                                          </div>
+                                          <!-- Value Date -->
+                                          <div class="py-6 pr-6">
+                                                 <p class="text-md-regular">5/11/2021</p>
+                                          </div>
+                                          <!-- Value Client -->
+                                          <div class="py-6 pr-4">
+                                                 <p class="text-md-regular">Jesse Pinkman</p>
+                                          </div>
+                                          <!-- Value Amount -->
+                                          <div class="py-6 pr-8">
+                                                 <p class="text-md-regular">$24</p>
+                                          </div>
+                                          <!-- Value Status -->
+                                          <div class="py-6 pr-4 pl-10">
+                                                 <p class="text-md-regular">Unpaid</p>
+                                          </div>
+                                   </div>
+                                   <!-- Divider -->
+                                   <hr>
+                                   <div class="flex">
+                                          <!-- Value ID -->
+                                          <div class="py-6 pr-4">
+                                                 <p class="text-md-regular">PD-6679B</p>
+                                          </div>
+                                          <!-- Value Date -->
+                                          <div class="py-6 pr-6">
+                                                 <p class="text-md-regular">5/11/2021</p>
+                                          </div>
+                                          <!-- Value Client -->
+                                          <div class="py-6 pr-4">
+                                                 <p class="text-md-regular">Fredian Putra</p>
+                                          </div>
+                                          <!-- Value Amount -->
+                                          <div class="py-6 pr-8">
+                                                 <p class="text-md-regular">$24</p>
+                                          </div>
+                                          <!-- Value Status -->
+                                          <div class="py-6 pr-4 pl-10">
+                                                 <p class="text-md-regular">Unpaid</p>
+                                          </div>
+                                   </div>
+                            </div>
                      </div>
               </div>
               </div>
@@ -139,6 +330,7 @@
 <script>
 // import sidebar components
 import Sidebar from "../../components/Sidebar.vue"
+import Dropdowns from "../../components/Dropdown.vue"
 export default {
        name: "Dashboard",
        head: {
@@ -158,7 +350,8 @@ export default {
 		]
 	},
        components: {
-              Sidebar
+              Sidebar,
+              Dropdowns
        }
 }
 </script>
