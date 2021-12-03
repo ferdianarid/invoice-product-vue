@@ -33,7 +33,7 @@
                             <NuxtLink to="/auth/login" class="no-underline inline-block border-none text-sm px-4 py-3 mr-3 leading-none bg-white border rounded text-blue-800  hover:border-transparent mt-4 sm:mt-0">Login</NuxtLink>
 
                             <!-- Get Started Button -->
-                            <NuxtLink to="/auth/register" class="no-underline inline-block text-sm px-4 py-3 leading-none bg-blue-800 border-blue-800 border rounded text-white  hover:border-transparent hover:bg-white hover:text-blue-800 mt-4 sm:mt-0">Get Started</NuxtLink>
+                            <PrimaryButton :buttonTitle="'Get Started'" :linkUrl="'/auth/register'" />
                             </div>
                      </div>
                      </nav>
@@ -42,6 +42,9 @@
 </template>
 
 <script>
+// import Primary Button
+import PrimaryButton from "../components/Button/PrimaryButton.vue"
+
 export default {
        name: "Navbar",
        data() {
@@ -49,6 +52,7 @@ export default {
                      open: false,
               }
        },
+       components: { PrimaryButton },
        methods: {
               toggle() {
                      this.open = !this.open
