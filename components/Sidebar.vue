@@ -1,9 +1,11 @@
 <template lang="">
        <!-- Sidebar -->
-              <div class="sidebar w-[240px] bg-[#202E63] h-auto px-8 pb-[30rem]">
+              <div class="sidebar w-[240px] bg-[#202E63] pb-[51rem] px-8">
                      <!-- Invoice Logo -->
                      <div class="py-8 border-b border-opacity-80 border-white">
-                            <img src="../static/timvoice-white.svg" alt="invoiceLogo">
+                            <NuxtLink to="/">
+                                   <img src="../static/timvoice-white.svg" alt="invoiceLogo">
+                            </NuxtLink>
                      </div>
                      <!-- Dashboard -->
                      <div class="mt-7 bg-[#32489A] py-[10px] px-3 rounded-md flex items-center transition-all hover:cursor-pointer">
