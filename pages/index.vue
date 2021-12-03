@@ -9,13 +9,12 @@
 					<h1 class="text-[2.75rem] leading-[1.2] md:text-heading-xl mt-14 heading">Your Freelance Business In One Place</h1>
 					<p class="text-sm text-gray-500 pt-2 pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ut esse doloribus repellat soluta, eligendi necessitatibus.</p>
 					<div class="flex flex-col md:flex-row max-w-md items-center">
-						<div class="w-full md:w-2/3">
+						<div class="w-full md:w-[50%]">
 							<input type="text" id="fullname" name="fullname" placeholder="Enter your email" class="appereance-none rounded border border-gray-200 w-full py-2.5 px-4 text-gray-700 leading-tight">
 						</div>
-						<div class="w-full md:w-1/3">
-							<NuxtLink to="/auth/login" class="w-full text-center font-bold ml-0 md:ml-1 no-underline inline-block px-4 py-3 leading-none bg-blue-800 border-blue-800 border rounded text-white hover:border-transparent hover:bg-white hover:text-blue-800 mt-4 sm:mt-0">
-								<p class="text-lg font-bold">Get Started</p>
-							</NuxtLink>
+						<!-- Button Primary / Call to Action -->
+						<div class="w-full md:w-[50%]">
+							<PrimaryButton :buttonTitle="'Get Started'" :linkUrl="'/auth/login'" />
 						</div>
 					</div>
 				</div>
@@ -26,7 +25,7 @@
 			</div>
 			<!-- Partner Section -->
 			<div class="w-full flex flex-col md:flex-row items-center my-[60px]">
-				<div class="w-1/4 flex  justify-start mt-10 md:mt-0">
+				<div class="w-1/4 flex justify-start mt-10 md:mt-0">
 					<img src="../static/Partner/Client-Logo2.svg" alt="partner1" />
 				</div>
 				<div class="w-1/4 flex justify-start mt-10 md:mt-0">
@@ -48,27 +47,7 @@
 					</div>
 				</div>
 				<div class="w-full md:w-1/2">
-					<div class="flex flex-col">
-						<BenefitCard />
-						<div class="w-full flex py-8 px-10 bg-[#F7F8FD] rounded-3xl my-2">
-							<div class="w-1/4">
-								<img class="scale-75" src="../static/briefcase.svg" alt="currency" width="100%" />
-							</div>
-							<div class="w-3/4">
-								<h1 class="text-heading-md fontBold">Win More Work</h1>
-								<p class="text-lg-regular text-gray-500">Create and customize invoices, receive updates about payment.</p>
-							</div>
-						</div>
-						<div class="w-full flex py-8 px-10 bg-[#F7F8FD] rounded-3xl my-2">
-							<div class="w-1/4">
-								<img class="scale-75" src="../static/shield.svg" alt="currency" width="100%" />
-							</div>
-							<div class="w-3/4">
-								<h1 class="text-heading-md fontBold">Protect Business</h1>
-								<p class="text-lg-regular text-gray-500">Create and customize invoices, receive updates about payment.</p>
-							</div>
-						</div>
-					</div>
+					<Benefits />
 				</div>
 			</div>
 			<!--  Main Features Section -->
@@ -262,15 +241,27 @@ import Register from "./auth/Register.vue"
 // import Navbar Components
 import Navbar from "~/components/Navbar.vue"
 
-// import Benefits Card Components
-import BenefitCard from "../components/BenefitCard.vue"
+// import Primary Button Components
+import PrimaryButton from "~/components/Button/PrimaryButton.vue"
+
+// import Benefit Components
+import Benefits from "~/components/Benefits.vue"
+
+// import main features
+import mainFeatures from "../apis/mainFeatures.json"
 
 export default {
 	name: "Homepage",
+	data() {
+		return {
+			features: mainFeatures
+		}
+	},
 	components: {
 		Register,
 		Navbar,
-		BenefitCard
+		PrimaryButton,
+		Benefits
 	},
 	head: {
 		title: "Timvoice - Homepage",
@@ -288,7 +279,7 @@ export default {
 			{ rel: "stylesheets", href: "https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"}
 		]
 	}
-}
+	}
 </script>
 
 <style>
