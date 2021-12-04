@@ -105,16 +105,8 @@
                      <!-- Summary Chart -->
                      <div class="w-[40%] h-auto py-8 px-10 bg-white rounded-lg">
                             <h1 class="font-bold text-heading-sm">Summary</h1>
-                            <!-- Chart -->
                             <!-- <InvoicesChart /> -->
                             <LineChart :chartData="usersData" :options="chartOptions" class="line-chart" />
-                            <!-- <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
-                                   <img src="../../static/bussiness.svg" alt="business">
-                                   <div class="ml-[16px]">
-                                          <p class="text-lg-regular font-bold">Invoice Customize</p>
-                                          <p class="text-md-regular text-gray-400">Upload your logo</p>
-                                   </div>
-                            </div> -->
                      </div>
                      <!--  RevenueStatistics -->
                      <div class="w-[60%] h-auto py-8 px-10 bg-white rounded-lg ml-8">
@@ -360,9 +352,9 @@ export default {
        },
        data () {
               return {
-                     chartData,
-                     chartOptions,
-                     usersData
+                     chartData: chartData,
+                     chartOptions: chartOptions,
+                     usersData: usersData
               }
        }
 }
