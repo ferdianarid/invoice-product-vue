@@ -103,37 +103,27 @@
               <!-- Summary and Revenue -->
               <div class="w-[1240px] h-auto px-16 bg-blue-50 flex justify-between">
                      <!-- Summary Chart -->
-                     <div class="w-[40%] h-[220px] py-8 px-10 bg-white rounded-lg">
+                     <div class="w-[40%] h-auto py-8 px-10 bg-white rounded-lg">
                             <h1 class="font-bold text-heading-sm">Summary</h1>
-                            <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
+                            <!-- Chart -->
+                            <InvoicesChart />
+                            <!-- <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
                                    <img src="../../static/bussiness.svg" alt="business">
                                    <div class="ml-[16px]">
                                           <p class="text-lg-regular font-bold">Invoice Customize</p>
                                           <p class="text-md-regular text-gray-400">Upload your logo</p>
                                    </div>
-                            </div>
+                            </div> -->
                      </div>
                      <!--  RevenueStatistics -->
-                     <div class="w-[60%] h-[220px] py-8 px-10 bg-white rounded-lg ml-8">
+                     <div class="w-[60%] h-auto py-8 px-10 bg-white rounded-lg ml-8">
                             <div class="flex justify-between items-center">
                                    <h1 class="font-bold text-heading-sm">Revenue</h1>
                                    <Dropdowns />
                             </div>
-                            <div class="flex justify-between">
-                                   <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
-                                   <img src="../../static/bussiness.svg" alt="business">
-                                   <div class="ml-[16px]">
-                                          <p class="text-lg-regular font-bold">Customize</p>
-                                          <p class="text-md-regular text-gray-400">Your logo</p>
-                                   </div>
-                            </div>
-                            <div class="profile-details mt-5 ml-2 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
-                                   <img src="../../static/bussiness.svg" alt="business">
-                                   <div class="ml-[16px]">
-                                          <p class="text-lg-regular font-bold">Proposals</p>
-                                          <p class="text-md-regular text-gray-400">Upload Brand</p>
-                                   </div>
-                            </div>
+                            <div class="w-full flex justify-between">
+                            <!-- Line Chart Components -->
+                            <LineChart :chartData="chartData" :options="chartOptions" class="line-chart" />
                             </div>
                      </div>
               </div>
@@ -330,7 +320,19 @@
 <script>
 // import sidebar components
 import Sidebar from "../../components/Sidebar.vue"
+
+// import dropdown components
 import Dropdowns from "../../components/Dropdown.vue"
+
+// import invoices chart
+import InvoicesChart from "../../components/Chart/InvoicesChart.vue"
+
+// import line chart
+import LineChart from "../../components/Chart/configs/LineChart.vue"
+
+// import invoice data
+import { chartData, chartOptions } from "../../components/Chart/data/Month"
+
 export default {
        name: "Dashboard",
        head: {
@@ -351,10 +353,17 @@ export default {
 	},
        components: {
               Sidebar,
-              Dropdowns
+              Dropdowns,
+              InvoicesChart,
+              LineChart
+       },
+       data () {
+              return {
+                     chartData,
+                     chartOptions
+              }
        }
 }
 </script>
 <style lang="">
-       
 </style>

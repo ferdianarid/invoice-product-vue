@@ -26,20 +26,6 @@
 			</div>
 			<!-- Partner Section -->
 			<Slider />
-			<!-- <div class="w-full flex flex-col md:flex-row items-center my-[60px]">
-				<div class="w-1/4 flex justify-start mt-10 md:mt-0">
-					<img src="../static/Partner/Client-Logo2.svg" alt="partner1" />
-				</div>
-				<div class="w-1/4 flex justify-start mt-10 md:mt-0">
-					<img src="../static/Partner/Client-Logo4.svg" alt="partner1" />
-				</div>
-				<div class="w-1/4 flex justify-center mt-10 md:mt-0">
-					<img src="../static/Partner/Client-Logo3.svg" alt="partner1" />
-				</div>
-				<div class="w-1/4 mt-10 md:mt-0">
-					<img src="../static/Partner/Client-Logo1.svg" alt="partner1" />
-				</div>
-			</div> -->
 			<!-- Feature Section -->
 			<div class="w-full flex flex-col md:flex-row my-16 md:my-24">
 				<div class="w-full md:w-1/2 mr-[100px] flex items-center">
