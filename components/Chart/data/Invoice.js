@@ -1,5 +1,5 @@
 export const InvoiceData = {
-    type: "bar",
+    type: "doughnut",
     data: {
         labels: ["Invoiced", "Paid/Collected", "Overdue"],
         datasets: [{
@@ -20,11 +20,19 @@ export const InvoiceData = {
         lineTension: 1,
         scales: {
             yAxes: [{
+                gridLines: {
+                    drawBorder: false
+                },
                 ticks: {
                     beginAtZero: true,
                     padding: 25
                 }
-            }]
+            }],
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                },
+            }],
         },
         plugins: {
             tooltip: {
@@ -51,6 +59,5 @@ export const InvoiceData = {
         }
     }
 }
-
 
 export default InvoiceData;

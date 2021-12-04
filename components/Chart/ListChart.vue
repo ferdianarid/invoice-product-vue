@@ -3,12 +3,18 @@
               <!-- Heading -->
               <h1 class="text-[5rem] font-bold text-blue-800 text-center">Chart</h1>
 
-              <div class="flex justify-between items-start">
+              <div class="flex justify-between items-start my-16">
               <!-- Line Chart -->
               <LineChart :chartData="chartData" :options="chartOptions" class="line-chart" />
+
+              <!-- Line Chart -->
+              <LineChart :chartData="usersData" :options="chartOptions" class="line-chart" />
               
-              <!-- Invoices Chart -->
-              <InvoicesChart />
+              </div>
+
+              <div class="my-16">
+                     <!-- Invoices Chart -->
+                     <InvoicesChart />
               </div>
        </div>
 </template>
@@ -19,14 +25,15 @@ import LineChart from "./configs/LineChart.vue"
 // import Invoice Chart
 import InvoicesChart from "../Chart/InvoicesChart.vue"
 
-import { chartData, chartOptions } from "../Chart/data/Month"
+import { chartData, chartOptions, usersData } from "../Chart/data/Month"
 
 export default {
        name: "ListChart",
        data() {
               return {
                      chartData,
-                     chartOptions
+                     chartOptions,
+                     usersData
               }
        },
        components: {

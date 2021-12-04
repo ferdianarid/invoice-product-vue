@@ -1,6 +1,6 @@
 <template lang="">
        <!-- Sidebar -->
-              <div class="sidebar w-[240px] bg-[#202E63] pb-[51rem] px-8">
+              <div class="sidebar w-[240px] bg-[#202E63] pb-[67rem] px-8">
                      <!-- Invoice Logo -->
                      <div class="py-8 border-b border-opacity-80 border-white">
                             <NuxtLink to="/">
