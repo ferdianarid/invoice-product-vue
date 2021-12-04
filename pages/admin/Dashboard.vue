@@ -106,7 +106,8 @@
                      <div class="w-[40%] h-auto py-8 px-10 bg-white rounded-lg">
                             <h1 class="font-bold text-heading-sm">Summary</h1>
                             <!-- Chart -->
-                            <InvoicesChart />
+                            <!-- <InvoicesChart /> -->
+                            <LineChart :chartData="usersData" :options="chartOptions" class="line-chart" />
                             <!-- <div class="profile-details mt-5 w-full hover:cursor-pointer flex items-center shadow-shadow-3 py-3 px-4 bg-[#92aaff] bg-opacity-10 hover:bg-opacity-20 rounded-lg">
                                    <img src="../../static/bussiness.svg" alt="business">
                                    <div class="ml-[16px]">
@@ -331,7 +332,7 @@ import InvoicesChart from "../../components/Chart/InvoicesChart.vue"
 import LineChart from "../../components/Chart/configs/LineChart.vue"
 
 // import invoice data
-import { chartData, chartOptions } from "../../components/Chart/data/Month"
+import { chartData, chartOptions, usersData } from "../../components/Chart/data/Month"
 
 export default {
        name: "Dashboard",
@@ -360,7 +361,8 @@ export default {
        data () {
               return {
                      chartData,
-                     chartOptions
+                     chartOptions,
+                     usersData
               }
        }
 }
