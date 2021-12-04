@@ -17,20 +17,20 @@
                      <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
                             <!-- Navigation  Links-->
                             <div class="text-sm font-semibold sm:flex-grow sm:text-right">
-                                   <NuxtLink to="/features" class="no-underline block text-blue-800 mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
+                                   <NuxtLink to="/features" class="font-bold no-underline block text-blue-800 mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
                                           Features
                                    </NuxtLink>
-                                   <NuxtLink to="/pricing" class="no-underline block text-blue-800 mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
+                                   <NuxtLink to="/pricing" class="font-bold no-underline block text-blue-800 mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
                                           Pricing
                                    </NuxtLink>
-                                   <NuxtLink to="/product" class="no-underline block text-blue-800 mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
+                                   <NuxtLink to="/product" class="font-bold no-underline block text-blue-800 mt-4 sm:mx-6 sm:inline-block sm:mt-0 text-teal-lighter hover:text-blue-800 mr-4">
                                           Product
                                    </NuxtLink>
                             </div>
                             <div>
 
                             <!-- Login Button -->
-                            <NuxtLink to="/auth/login" class="no-underline inline-block border-none text-sm px-4 py-3 mr-3 leading-none bg-white border rounded text-blue-800  hover:border-transparent mt-4 sm:mt-0">Login</NuxtLink>
+                            <NuxtLink to="/auth/login" class="font-bold no-underline inline-block border-none text-sm px-4 py-3 mr-3 leading-none bg-white border rounded text-blue-800  hover:border-transparent mt-4 sm:mt-0">Login</NuxtLink>
 
                             <!-- Get Started Button -->
                             <PrimaryButton :buttonTitle="'Get Started'" :linkUrl="'/auth/register'" />

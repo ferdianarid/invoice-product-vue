@@ -1,7 +1,7 @@
 <template lang="">
 <div class="flex flex-col">
        <div v-for="list in benefits">
-       <div class="w-full flex py-8 px-10 bg-[#F7F8FD] rounded-3xl my-2">
+       <div class="w-full flex py-6 px-8 bg-[#F7F8FD] rounded-xl my-2">
               <div class="w-1/4">
                      <img class="scale-75" :src="list.url" alt="currency" width="100%" />
               </div>
