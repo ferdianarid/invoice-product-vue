@@ -2,9 +2,11 @@
 <div class="flex flex-col">
        <div v-for="list in benefits">
        <div class="w-full flex py-6 px-8 bg-[#F7F8FD] rounded-xl my-2">
+		<!-- images -->
               <div class="w-1/4">
                      <img class="scale-75" :src="list.url" alt="currency" width="100%" />
               </div>
+		<!-- description -->
               <div class="w-3/4 ml-2">
                      <h1 class="text-heading-md fontBold">{{ list.title }}</h1>
                      <p class="text-lg-regular text-gray-500">{{ list.subtitle }}</p>
