@@ -12,6 +12,20 @@ export const InvoiceData = {
         }]
     },
     options: {
+        animations: {
+            radius: {
+                duration: 400,
+                easing: 'linear',
+                loop: (context) => context.active
+            }
+        },
+        hoverRadius: 12,
+        hoverBackgroundColor: 'yellow',
+        interaction: {
+            mode: 'nearest',
+            intersect: false,
+            axis: 'x'
+        },
         title: {
             display: true,
             text: "Summary Invoices"
