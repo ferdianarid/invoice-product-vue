@@ -105,8 +105,6 @@
 			<!-- Testimonials Section -->
 			<div class="w-full my-16 md:my-24">
 				<h1 class="text-[2.75rem] leading-[1.2] md:text-heading-xl mt-14 heading mb-12 text-center">What Did They Say</h1>
-				<Swipers />
-				
 			</div>
 			<!-- Call to Action -->
 			<div class="w-full mt-12 mb-24 rounded-lg py-16 md:py-20 px-4 md:px-[105px] flex flex-col md:flex-row justify-between">
@@ -116,7 +114,7 @@
 				</div>
 				<div class="w-full md:w-1/2 cta-button flex flex-col md:flex-row justify-start md:justify-end items-center mt-2 md:mt-0">
 					<!-- View Pricing -->
-					<NuxtLink to="/auth/register" class="w-full md:w-[40%] no-underline inline-block border-none text-sm py-3 px-4 bg-[#F7F8FD] py-2 mr-3 leading-none border rounded text-blue-800  hover:border-transparent mt-4 sm:mt-0">
+					<NuxtLink to="/auth/register" class="w-full md:w-[40%] no-underline inline-block border-none text-sm py-3 px-4 bg-[#F7F8FD] mr-3 leading-none border rounded text-blue-800  hover:border-transparent mt-4 sm:mt-0">
 						<p class="text-center">View Pricing</p>
 					</NuxtLink>
 					<!-- Create Free Account -->
@@ -161,13 +159,13 @@ export default {
 		}
 	},
 	components: {
-    Register,
-    Navbar,
-    PrimaryButton,
-    Benefits,
-    Footer,
-    Slider
-},
+		Register,
+		Navbar,
+		PrimaryButton,
+		Benefits,
+		Footer,
+		Slider
+	},
 	head: {
 		title: "Timvoice - Homepage",
 		meta: [
@@ -184,7 +182,7 @@ export default {
 			{ rel: "stylesheets", href: "https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"}
 		]
 	}
-	}
+}
 </script>
 
 <style>
