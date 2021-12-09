@@ -56,8 +56,8 @@ export default {
        data() {
               return {
                      isOptionsExpanded: false,
-                     selectedOption: "Last 6 Month",
-                     options: ["Weekly", "Monthly", "Last 3 Month", "Last 6 Month"]
+                     selectedOption: "6 Bulan Lalu",
+                     options: ["Mingguan", "Bulanan", "3 Bulan Lalu", "6 Bulan Lalu"]
               };
               },
               methods: {
