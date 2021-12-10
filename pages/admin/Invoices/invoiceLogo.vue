@@ -8,9 +8,11 @@
                      <!-- Profiles Completeness -->
                      <Profiles />
                      <!-- Fundamentals Information -->
+                     <!-- ccc -->
                      <div class="w-[1240px] h-auto px-16 bg-blue-50">
                             <!-- Breadcrumb -->
-                            <p class="py-8">Tagihan / <span class="font-bold"> Tagihan Logo Desain </span></p>
+                            <p class="py-8">
+                                   <NuxtLink to="/admin/dashboard/invoices">Tagihan</NuxtLink> / <span class="font-bold"> Tagihan Logo Desain </span></p>
                             <!-- Button -->
                             <!-- Button Action -->
                             <div class="flex justify-between items-center">
@@ -56,7 +58,7 @@ export default {
 			{ name: "viewport", content: "width=device-width, initial-scale=1"},
 			{
 				hid: "invoice tagihan logo",
-				name: "invoice product - tagihan logo",
+				name: "invoice product - tagihan page logo",
 				content: "invoice product - tagihan logo"
 			}
 		],
