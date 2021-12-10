@@ -36,6 +36,8 @@
                                           <div class="h-auto w-auto bg-[#F7F8FD] rounded-md">
                                                  <p class="text-[#405DC7] font-bold py-2 px-4 text-lg-bold">Buat Tagihan Baru</p>
                                           </div>
+                                          <!-- Nomor Tagihan -->
+                                          <p class="text-lg-bold">Nomor Tagihan</p>
                                    </div>
                                    <!-- Divider -->
                                    <hr class="pb-6" color="blue" width="100%">
@@ -46,7 +48,23 @@
 </template>
 <script>
 export default {
-       
+       name: "InvoiceLogo",
+       head: {
+		title: "Timvoice - Tagihan Logo",
+		meta: [
+			{ charset: "utf-8" },
+			{ name: "viewport", content: "width=device-width, initial-scale=1"},
+			{
+				hid: "invoice tagihan logo",
+				name: "invoice product - tagihan logo",
+				content: "invoice product - tagihan logo"
+			}
+		],
+		link: [
+			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
+			{ rel: "stylesheets", href: "https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"}
+		]
+	},
 }
 </script>
 <style lang="">
